@@ -6,7 +6,6 @@ const questionSchema = mongoose.Schema({
   question_id: Number,
   product_id: Number,
   user: String,
-  date: Number,
   question_body: String,
   answer: [
     {
@@ -29,7 +28,6 @@ const sampleData = [
     question_id: 058,
     product_id: 017,
     user: 'BobbyB',
-    date: "2019-01-31T10:01:00.000Z",
     question_body: 'Does this product fit both men and women?',
     answer: [
         {
@@ -48,7 +46,6 @@ const sampleData = [
         question_id: 009,
         product_id: 043,
         user: 'Rachel098',
-        date: "2020-05-01T12:14:00.000Z",
         question_body: 'How durable is this?',
         answer: [
             {
@@ -74,5 +71,12 @@ const sampleData = [
         ],
         },
 ]
+
+const insertSampleData = () => {
+    Question.create(sampleData)
+        .then(() => db.disconnect());
+}
+
+insertSampleData();
 
 module.exports = { Question, db };
