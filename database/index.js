@@ -32,7 +32,6 @@ const sampleData = [
     answer: [
         {
         id: 023,
-        date: "2019-11-31T03:01:40.000Z",
         body: 'Yes it does.',
         user: 'REI Helper Sally',
         helpful: {
@@ -50,7 +49,6 @@ const sampleData = [
         answer: [
             {
             id: 023,
-            date: "2020-05-05T08:22:36.000Z",
             body: 'It can stand up to all your favortie activities.',
             user: 'REI Helper Jim',
             helpful: {
@@ -60,7 +58,6 @@ const sampleData = [
             }, 
             {
                 id: 079,
-                date: "2020-06-09T08:21:08.000Z",
                 body: 'It tore after one week.',
                 user: 'CaliBro43',
                 helpful: {
@@ -74,7 +71,7 @@ const sampleData = [
 
 const insertSampleData = () => {
     Question.create(sampleData)
-        .then(() => db.disconnect());
+        .then(() => mongoose.disconnect());
 }
 
 insertSampleData();
