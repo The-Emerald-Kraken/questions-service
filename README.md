@@ -1,6 +1,6 @@
-# Project Name
+# Outdoor Recreational E-Commerce App
 
-> Project description
+> Each service in this app (questions, review, display, and related items) was developed separately using SOA.
 
 ## Related Projects
 
@@ -15,9 +15,6 @@
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
-
-> Some usage instructions
 
 ## Requirements
 
